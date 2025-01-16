@@ -1,27 +1,9 @@
-body {
-    padding: 0;
-    margin: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.navigationSidebar {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: space-evenly;
-    padding: 10px 0;
-    background-color: aliceblue;
-}
-
-.navigationLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 80%;
-}
-
-.navigationLink {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-}
+@layer base {
+    html {
+      font-family: "Inter",sans-serif;
+    }
+  }
