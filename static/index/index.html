@@ -13,8 +13,7 @@
         class="z-50 flex flex-row w-full items-center py-2 h-[8vh] min-h-12 border-b-[1px] border-b-gray-200 bg-white sticky top-0 transition-top duration-500">
         <div class="flex flex-row gap-2 min-w-60 ml-5">
             <a id="aboutNavigation" href="#about" data-onScreen="true" class="navigationItem">About</a>
-            <a id="experienceNavigation" href="#experience" data-onScreen="true" class="navigationItem">Experience</a>
-            <a id="educationNavigation" href="#education" data-onScreen="true" class="navigationItem">Education</a>
+            <a id="experienceNavigation" href="#experience" data-onScreen="false" class="navigationItem">Journey</a>
             <a id="projectsNavigation" href="#projects" class="navigationItem">Projects</a>
             <a id="skillsNavigation" href="#skills" class="navigationItem">Skills</a>
             <a id="contactNavigation" href="#contact" class="navigationItem">Contact</a>
@@ -56,7 +55,7 @@
         <span class="w-[40vw]">
             <div class="flex flex-col gap-10 items-start">
                 <p class="text-5xl text-start font-normal"> Hello, I'm David Alves.</p>
-                <p class="text-6xl text-start font-extrabold">A software engineer from Braga,Portugal.</p>
+                <p class="text-6xl text-start font-extrabold text-wrap">A software engineer from Braga,Portugal.</p>
                 <p class="text-xl text-start font-light">I love God. I love to code. I love football.</p>
                 <button>
                     <span
@@ -72,9 +71,9 @@
 
         </span>
     </div>
-    <div id="experience" class="w-screen flex justify-center pt-52">
-        <div class="flex flex-col w-[70%] gap-20">
-            <h1 class="w-fit text-5xl text-start font-semibold">Previous Experiences</h1>
+    <div id="experience" class="w-screen flex justify-center mt-52 mb-52">
+        <div class="flex flex-col w-[70%] gap-40">
+            <h1 class="w-fit text-5xl text-start font-semibold">Professional Journey</h1>
             <span class="flex flex-row w-full justify-around">
                 <img src="/static/alticelabs.png"
                     class="self-start max-w-[50%] aspect-auto transition-transform duration-500 ease-in-out hover:scale-110">
@@ -85,13 +84,15 @@
                         <h4 class="text-xl font-semibold">Accomplishments:</h4>
                         <li class="text-lg font-normal">Migration of a legacy system to AWS cloud with a microservices
                             architecture</li>
-                        <li class="text-lg font-normal">Development of microservices using Spring Boot, MongoDB as the database,
+                        <li class="text-lg font-normal">Development of microservices using Spring Boot, MongoDB as the
+                            database,
                             and Kafka for inter-service communication.</li>
-                        <li class="text-lg font-normal">System performance optimization through load testing with JMeter</li>
+                        <li class="text-lg font-normal">System performance optimization through load testing with JMeter
+                        </li>
                     </ul>
                     <button class="mt-4">
                         <span
-                            class="w-full px-8 py-2 fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
+                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
                             More about Altice Labs
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" class="inline-block">
                                 <path d="m2.828 15.555 7.777-7.779L2.828 0 0 2.828l4.949 4.948L0 12.727l2.828 2.828z" />
@@ -100,13 +101,65 @@
                     </button>
                 </span>
             </span>
+
+            <span class="flex flex-row w-full justify-around">
+                <span class="max-w-[40%] flex flex-col gap-4 items-start ">
+                    <h2 class="text-4xl font-bold">Bachelor's degree in Computer Engineering</h2>
+                    <header class="text-xl font-light">August 2019 - July 2022</header>
+                    <p class="text-xl font-normal">GPA: 16.0 / 20</p>
+                    <button class="">
+                        <span
+                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
+                            More about Universidade do Minho
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" class="inline-block">
+                                <path d="m2.828 15.555 7.777-7.779L2.828 0 0 2.828l4.949 4.948L0 12.727l2.828 2.828z" />
+                            </svg>
+                        </span>
+                    </button>
+                </span>
+                <img src="/static/EEUM_logo_EN.png"
+                    class="self-start max-w-[35%] aspect-auto transition-transform duration-500 ease-in-out hover:scale-110">
+            </span>
         </div>
     </div>
-    <div id="education" class="min-h-screen">
-        <h1 class="ml-auto mr-auto w-fit">Education</h1>
-    </div>
-    <div id="projects" class="min-h-screen">
-        <h1 class="ml-auto mr-auto w-fit">Projects</h1>
+    <div id="projects" class=" min-h-screen w-screen flex justify-center mb-52">
+        <div class="flex flex-col w-[70%] gap-20 items-center">
+            <h1 class="w-fit text-5xl text-start font-semibold">Projects</h1>
+            <div class="flex flex-row justify-around">
+                <span class="bg-gray-50 flex flex-col p-5 w-2/5 items-center gap-10">
+                    <img src="/static/VideoMorpher.png" class="w-">
+                    <h2 class="text-2xl font-bold">Video Morpher</h2>
+                    <p class="text-base font-normal text-justify">WebServer written in Go that allows users to upload
+                        video
+                        files and apply effects. The server uses
+                        FFMPEG to handle video operations.</p>
+                    <button class="">
+                        <span
+                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
+                            Source
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" class="inline-block">
+                                <path d="m2.828 15.555 7.777-7.779L2.828 0 0 2.828l4.949 4.948L0 12.727l2.828 2.828z" />
+                            </svg>
+                        </span>
+                    </button>
+                </span>
+
+                <span class="bg-gray-50 flex flex-col p-5 w-2/5 items-center gap-10">
+                    <img src="/static/html-svgrepo-com.svg" class="max-w-[50%]">
+                    <h2 class="text-2xl font-bold">EasyHTTP</h2>
+                    <p class="text-base font-normal text-justify">HTTP Protocol implementation in Go.</p>
+                    <button class="">
+                        <span
+                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
+                            Source
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" class="inline-block">
+                                <path d="m2.828 15.555 7.777-7.779L2.828 0 0 2.828l4.949 4.948L0 12.727l2.828 2.828z" />
+                            </svg>
+                        </span>
+                    </button>
+                </span>
+            </div>
+        </div>
     </div>
     <div id="skills" class="min-h-screen">
         <h1 class="ml-auto mr-auto w-fit">Skills</h1>

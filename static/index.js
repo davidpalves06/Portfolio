@@ -3,8 +3,6 @@ const aboutNav = document.getElementById("aboutNavigation")
 const aboutSection = document.getElementById("about")
 const experienceNav = document.getElementById("experienceNavigation")
 const experienceSection = document.getElementById("experience")
-const educationNav = document.getElementById("educationNavigation")
-const educationSection = document.getElementById("education")
 const projectNav = document.getElementById("projectsNavigation")
 const projectSection = document.getElementById("projects")
 const skillsNav = document.getElementById("skillsNavigation")
@@ -17,7 +15,6 @@ let mouseY = 0;
 function resetStyles() {
     aboutNav.setAttribute("data-onscreen", "false")
     experienceNav.setAttribute("data-onscreen", "false")
-    educationNav.setAttribute("data-onscreen", "false")
     projectNav.setAttribute("data-onscreen", "false")
     skillsNav.setAttribute("data-onscreen", "false")
     contactNav.setAttribute("data-onscreen", "false")
@@ -36,7 +33,6 @@ function handleScroll() {
         window.requestAnimationFrame(function () {
             let aboutOffsetTop = aboutSection.offsetTop + (aboutSection.offsetHeight / 2)
             let experienceOffsetTop = experienceSection.offsetTop + (experienceSection.offsetHeight / 2)
-            let educationOffsetTop = educationSection.offsetTop + (educationSection.offsetHeight / 2)
             let projectsOffsetTop = projectSection.offsetTop + (projectSection.offsetHeight / 2)
             let skillsOffsetTop = skillsSection.offsetTop + (skillsSection.offsetHeight / 2)
             let contactOffsetTop = contactSection.offsetTop + (contactSection.offsetHeight / 2)
@@ -46,8 +42,6 @@ function handleScroll() {
                 aboutNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < experienceOffsetTop) {
                 experienceNav.setAttribute("data-onscreen", "true")
-            } else if (currentPos < educationOffsetTop) {
-                educationNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < projectsOffsetTop) {
                 projectNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < skillsOffsetTop) {

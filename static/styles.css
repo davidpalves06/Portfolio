@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: clamp(8px,1.5vw,16px);
   }
 }
 
