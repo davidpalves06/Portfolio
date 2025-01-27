@@ -7,8 +7,6 @@ const projectNav = document.getElementById("projectsNavigation")
 const projectSection = document.getElementById("projects")
 const skillsNav = document.getElementById("skillsNavigation")
 const skillsSection = document.getElementById("skills")
-const contactNav = document.getElementById("contactNavigation")
-const contactSection = document.getElementById("contact")
 let previousPosition = window.scrollY
 let mouseY = 0;
 
@@ -35,7 +33,6 @@ function handleScroll() {
             let experienceOffsetTop = experienceSection.offsetTop + (experienceSection.offsetHeight / 2)
             let projectsOffsetTop = projectSection.offsetTop + (projectSection.offsetHeight / 2)
             let skillsOffsetTop = skillsSection.offsetTop + (skillsSection.offsetHeight / 2)
-            let contactOffsetTop = contactSection.offsetTop + (contactSection.offsetHeight / 2)
             let currentPos = (this.scrollY !== undefined) ? this.scrollY : (document.documentElement || document.body.parentNode || document.body).currentPos;
             resetStyles()
             if (currentPos >= 0 && currentPos < aboutOffsetTop) {
@@ -46,8 +43,6 @@ function handleScroll() {
                 projectNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < skillsOffsetTop) {
                 skillsNav.setAttribute("data-onscreen", "true")
-            } else if (currentPos < contactOffsetTop) {
-                contactNav.setAttribute("data-onscreen", "true")
             }
 
             if (currentPos > previousPosition && mouseY > navBar.offsetHeight) {
