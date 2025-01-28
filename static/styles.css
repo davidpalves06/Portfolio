@@ -12,6 +12,7 @@
 @layer components {
   .navigationItem {
     @apply text-black text-lg font-normal hover:text-red-500 hover:border-b-red-500 hover:border-b-2
-    data-[onscreen=true]:text-red-500 data-[onscreen=true]:border-b-red-500 data-[onscreen=true]:border-b-2;
+    data-[onscreen=true]:text-red-500 data-[onscreen=true]:border-b-red-500 data-[onscreen=true]:border-b-2
+    transition-all duration-150 ease-in-out;
   }
 }

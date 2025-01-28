@@ -15,7 +15,6 @@ function resetStyles() {
     experienceNav.setAttribute("data-onscreen", "false")
     projectNav.setAttribute("data-onscreen", "false")
     skillsNav.setAttribute("data-onscreen", "false")
-    contactNav.setAttribute("data-onscreen", "false")
 }
 
 document.addEventListener('mousemove', function (event) {
