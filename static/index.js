@@ -57,5 +57,38 @@ function handleScroll() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    let lazyElements = [].slice.call(document.querySelectorAll(".lazy"));
+
+    if ("IntersectionObserver" in window) {
+        let lazyElementObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                const rect = entry.boundingClientRect;
+                if (entry.isIntersecting || rect.top < 0) {
+                    let lazyElement = entry.target;
+
+                    if (lazyElement.tagName && lazyElement.tagName.toUpperCase() === 'IMG') {
+                        lazyElement.src = lazyElement.dataset.src;
+                        lazyElement.loading = "eager"
+                        lazyElement.removeAttribute('data-src');
+                        lazyElement.onload = function () {
+                            lazyElement.classList.add('loaded');
+                        };
+                    }
+                    else {
+                        lazyElement.classList.add('loaded')
+                    }
+
+
+                    lazyElementObserver.unobserve(lazyElement);
+                }
+            });
+        });
+
+        lazyElements.forEach(function (lazyElement) {
+            lazyElementObserver.observe(lazyElement);
+        });
+    }
+});
 
 window.addEventListener('scroll', handleScroll)

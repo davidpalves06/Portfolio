@@ -5,14 +5,57 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: clamp(8px,1.5vw,16px);
   }
 }
 
 @layer components {
   .navigationItem {
-    @apply text-black text-lg font-normal hover:text-red-500 hover:border-b-red-500 hover:border-b-2
+    @apply text-black md:text-base lg:text-lg font-normal hover:text-red-500 hover:border-b-red-500 hover:border-b-2
     data-[onscreen=true]:text-red-500 data-[onscreen=true]:border-b-red-500 data-[onscreen=true]:border-b-2
     transition-all duration-150 ease-in-out;
+  }
+
+  
+  .lazy {
+    @apply opacity-0;
+  }
+  
+  .lazy.loaded {
+    @apply opacity-100;
+    transition: opacity 0.5s ease-in 0s ;
+  }
+  
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-left.loaded {
+    animation: slide-in-left 0.5s ease-in;
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-right.loaded {
+    animation: slide-in-right 0.5s ease-in;
+  }
+
+  .image {
+    @apply aspect-auto transition-transform ease-in-out hover:scale-110 duration-500;
+  }
+
+  .linkButton {
+    @apply fill-red-500 text-start font-bold border border-red-500  text-red-500 transition-colors duration-300 ease-linear hover:fill-white hover:text-white hover:bg-red-500;
   }
 }
