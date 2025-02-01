@@ -52,7 +52,8 @@
   }
 
   .image {
-    @apply aspect-auto transition-transform ease-in-out hover:scale-110 duration-500;
+    @apply aspect-auto hover:scale-110;
+    transition: scale 0.5s linear 0s;
   }
 
   .linkButton {
