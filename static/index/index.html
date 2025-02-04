@@ -10,7 +10,7 @@
 
 <body>
     <div id="navBar"
-        class="z-50 flex flex-row w-full justify-around items-center py-2 h-[8vh] min-h-12 border-b-[1px] border-b-gray-200 bg-white sticky top-0 transition-top duration-500">
+        class="z-50 flex flex-row w-full justify-around items-center py-2 h-20 border-b-[1px] border-b-gray-200 bg-white sticky top-0 transition-top duration-500">
         <div class="flex flex-row gap-2 min-w-60 ml-5 max-lg:hidden">
             <a id="aboutNavigation" href="#about" data-onScreen="true" class="navigationItem">About</a>
             <a id="experienceNavigation" href="#experience" class="navigationItem">Journey</a>
@@ -18,7 +18,7 @@
             <a id="projectsNavigation" href="#projects" class="navigationItem">Projects</a>
         </div>
         <a href="/" class="font-extrabold text-3xl lg:text-4xl xl:text-5xl max-lg:relative">David Alves</a>
-        <div class="flex flex-row justify-center gap-x-2 lg:gap-x-4 min-w-60 h-full items-center">
+        <div class="flex flex-row justify-center gap-x-2 lg:gap-x-4 min-w-60 items-center">
             <a href="/" target="_blank" rel="noopener noreferrer">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 496 512" class="h-5 w-5 transition-all duration-150 ease-linear hover:h-7 hover:w-7">
@@ -52,10 +52,10 @@
         </div>
     </div>
 
-    <div id="about" class="flex flex-col md:flex-row items-center justify-center my-20 gap-2 md:gap-x-20">
-        <span class="flex items-center justify-center overflow-hidden w-11/12 md:w-[45vw]">
+    <div id="about" class="w-10/12 ml-auto mr-auto md:w-full flex flex-col md:flex-row items-start justify-start md:items-center md:justify-center my-6 gap-2 md:gap-x-20">
+        <span class="overflow-hidden w-[400px] md:w-[40vw]">
             <img src="" loading="lazy" data-src="/static/my_photo.jpg"
-                class="relative z-10 image lazy slide-in-left " />
+                class="relative z-10 image lazy slide-in-left w-full" />
         </span>
         <span class="w-11/12 md:w-[40vw] slide-in-right lazy">
             <div class="flex flex-col gap-4 md:gap-10 items-start">
@@ -71,13 +71,13 @@
             </div>
         </span>
     </div>
-    <div id="experience" class="w-11/12 flex flex-col gap-10 md:gap-40 justify-center  ml-auto mr-auto pt-12 pb-12 md:pt-24 lg:pt-36  md:pb-24 lg:pb-36 ">
+    <div id="experience" class="w-11/12 flex flex-col gap-10 md:gap-40 justify-center items-center ml-auto mr-auto pt-12 pb-12 md:pt-24 lg:pt-36  md:pb-24 lg:pb-36 ">
             <h1 class="w-fit text-5xl text-center md:text-start font-black text-wrap">Professional Journey</h1>
-            <span class="flex flex-col-reverse items-center md:flex-row md:w-full md:justify-around">
+            <span class="flex flex-col-reverse items-center  md:flex-row  md:justify-between">
                 <img src="" loading="lazy" data-src="/static/alticelabs.png"
-                    class="image lazy self-start md:w-1/2 slide-in-left">
+                    class="image lazy self-start w-96 md:w-[400px] lg:w-[550px] xl:w-[700px] aspect-video slide-in-left">
                 <span class="md:max-w-[40%] flex flex-col items-center gap-4 md:items-start slide-in-right lazy">
-                    <h2 class="text-2xl md:text-4xl font-bold">Software Developer</h2>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold">Software Developer</h2>
                     <header class="text-base md:text-xl font-light">July 2022 - Present</header>
                     <ul class="list-disc list-inside hidden xl:block">
                         <h4 class="text-xl font-semibold ">Accomplishments:</h4>
@@ -103,108 +103,108 @@
             </div>
             <span class="flex flex-col items-center gap-4 md:flex-row md:w-full md:justify-around">
                 <span class="md:max-w-[40%] flex flex-col gap-4 items-center md:items-start slide-in-left lazy">
-                    <h2 class="text-2xl md:text-4xl font-bold text-center md:text-start">Bachelor's degree in Computer Engineering</h2>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-start">Bachelor's degree in Computer Engineering</h2>
                     <header class="md:text-xl font-light">August 2019 - July 2022</header>
                     <p class="md:text-xl font-semibold">GPA: 16.0 / 20</p>
                     <button class="mt-4 hidden md:block">
                         <span
-                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 transition-colors duration-300 ease-linear fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
+                            class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 transition-colors duration-300 ease-linear fill-red-500  lg:text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
                             More about Universidade do Minho ➜
                         </span>
                     </button>
                 </span>
                 <img src="" loading="lazy" data-src="/static/EEUM_logo_EN.png"
-                    class="hover:scale-100 w-9/12 md:w-[35%] image lazy slide-in-right">
+                    class="hover:scale-100 w-96 md:w-[350px] lg:w-[450px] xl:w-[600px] image lazy slide-in-right">
             </span>
     </div>
     <div id="skills" class="bg-gray-50 min-h-screen w-screen flex justify-center pt-12 pb-12 md:pt-32 md:pb-32">
-        <div class="flex flex-col w-[70%] gap-10 md:gap-20 items-center">
+        <div class="flex flex-col w-[90%] gap-10 md:gap-20 items-center">
             <h1 class="w-fit text-5xl font-bold">Skills</h1>
             <h3 class="text-xl md:text-3xl text-start font-semibold">Backend Languages/Frameworks</h3>
             <div class="flex flex-row w-full justify-center items-center gap-16 gap-y-8">
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">Java</h4>
                     <img loading="lazy" data-src="/static/java-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">Spring Boot</h4>
                     <img loading="lazy" data-src="/static/spring-boot-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">Golang</h4>
                     <img loading="lazy" data-src="/static/go-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
             </div>
             <h3 class="text-xl md:text-3xl text-center font-semibold">Frontend Languages/Frameworks</h3>
             <div class="flex flex-row w-full justify-center items-center  gap-16 gap-y-8 flex-wrap">
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">HTML</h4>
                     <img loading="lazy" data-src="/static/html-5-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">Javascript</h4>
                     <img loading="lazy" data-src="/static/javascript-logo-svgrepo-com.svg"
-                        class="image lazy rounded-lg" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48 rounded-lg" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">CSS</h4>
                     <img loading="lazy" data-src="/static/css-3-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">REACT</h4>
                     <img loading="lazy" data-src="/static/react-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6 ">
+                <span class="flex flex-col items-center gap-4 ">
                     <h4 class="text-center md:text-xl font-semibold">Tailwind</h4>
                     <img loading="lazy" data-src="/static/tailwind-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
             </div>
             <h3 class="text-xl md:text-3xl text-start font-semibold">Databases</h3>
             <div class="flex flex-row w-full justify-center items-center  gap-16 gap-y-8 flex-wrap">
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">MySQL</h4>
                     <img loading="lazy" data-src="/static/mysql-logo-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">PostgreSQL</h4>
                     <img loading="lazy" data-src="/static/postgresql-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">MongoDB</h4>
                     <img loading="lazy" data-src="/static/mongodb-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">Redis</h4>
                     <img loading="lazy" data-src="/static/redis-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
             </div>
             <h3 class="text-xl md:text-3xl text-start font-semibold">Other Technologies</h3>
             <div class="flex flex-row w-full justify-center items-center  gap-16 gap-y-8">
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">Docker</h4>
                     <img loading="lazy" data-src="/static/docker-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">AWS</h4>
                     <img loading="lazy" data-src="/static/aws-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
-                <span class="flex flex-col gap-4 w-1/6">
+                <span class="flex flex-col items-center gap-4">
                     <h4 class="text-center md:text-xl font-semibold">Git</h4>
                     <img loading="lazy" data-src="/static/git-svgrepo-com.svg"
-                        class="image lazy" />
+                        class="image lazy w-12 h-12 md:w-24 lg:w-36 xl:w-48 md:h-24 lg:h-36 xl:h-48" />
                 </span>
             </div>
         </div>
