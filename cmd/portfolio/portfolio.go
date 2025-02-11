@@ -1,41 +1,23 @@
 package main
 
 import (
-	"html/template"
 	"log"
-	"net/http"
+
+	"github.com/davidpalves06/HTTPGolang/easyhttp"
 )
 
-func sendIndexPage(w http.ResponseWriter, r *http.Request) {
-	log.Println("Index Page request received")
-
-	if r.Method != "GET" {
-		log.Println("Method not allowed. Request failed")
-		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		return
-	}
-
-	w.Header().Set("Content-type", "text/html")
-	html, err := template.ParseFiles("static/index/index.html")
-	if err != nil {
-		log.Println("Could not read file. Request failed")
-		http.Error(w, "Internal Error", http.StatusInternalServerError)
-		return
-	}
-	err = html.Execute(w, nil)
-	if err != nil {
-		log.Println("Could not send html. Request failed")
-		http.Error(w, "Internal Error", http.StatusInternalServerError)
-		return
-	}
-}
-
 func main() {
-	var server = http.Server{
-		Addr: ":8080",
-	}
-	http.Handle("/static/", http.FileServer(http.Dir(".")))
-	http.HandleFunc("/", sendIndexPage)
+	server, err := easyhttp.NewHTTPServer(":8080")
 
-	server.ListenAndServe()
+	if err != nil {
+		log.Fatalln(err.Error())
+	}
+
+	server.HandleGET("/", easyhttp.FileServer("static/index/index.html"))
+	server.HandleGET("/contact", easyhttp.FileServer("static/contact/contact.html"))
+	server.HandleGET("/bio", easyhttp.FileServer("static/bio/bio.html"))
+	server.HandleGET("/static/*", easyhttp.FileServerFromPath("static/"))
+	server.HandleGET("*", easyhttp.FileServer("static/error/notfound.html"))
+
+	server.Run()
 }

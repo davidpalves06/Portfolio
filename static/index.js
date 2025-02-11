@@ -38,11 +38,11 @@ function handleScroll() {
                 aboutNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < experienceOffsetTop) {
                 experienceNav.setAttribute("data-onscreen", "true")
-            } else if (currentPos < projectsOffsetTop) {
-                projectNav.setAttribute("data-onscreen", "true")
             } else if (currentPos < skillsOffsetTop) {
                 skillsNav.setAttribute("data-onscreen", "true")
-            }
+            } else if (currentPos < projectsOffsetTop) {
+                projectNav.setAttribute("data-onscreen", "true")
+            } 
 
             if (currentPos > previousPosition && mouseY > navBar.offsetHeight) {
                 navBar.style.top = `-${navBar.offsetHeight}px`
