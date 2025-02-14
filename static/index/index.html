@@ -54,7 +54,7 @@
 
     <div id="about" class="w-10/12 ml-auto mr-auto md:w-full flex flex-col md:flex-row items-start justify-start md:items-center md:justify-center my-6 gap-2 md:gap-x-20">
         <span class="overflow-hidden w-[400px] md:w-[40vw]">
-            <img src="" loading="lazy" data-src="/static/my_photo.jpg"
+            <img src="" loading="lazy" data-src="/static/personal_photo.webp"
                 class="relative z-10 image lazy slide-in-left w-full" />
         </span>
         <span class="w-11/12 md:w-[40vw] slide-in-right lazy">
@@ -64,7 +64,7 @@
                 <p class="lg:text-xl text-start font-light">I love God. I love to code. I love football.</p>
                 <button>
                     <a href="/bio"
-                        class="w-full px-8 py-2 md:text-xl linkButton">
+                        class="hidden w-full px-8 py-2 md:text-xl linkButton">
                         Find more about me ➜
                     </a>
                 </button>
@@ -217,7 +217,7 @@
                 <span class="bg-gray-50 flex flex-col p-5 lg:w-2/5 items-center gap-10">
                     <img loading="lazy" data-src="/static/videomorpher.jpg" class="lazy">
                     <h2 class="text-3xl font-extrabold ">Video Morpher</h2>
-                    <p class="text-base font-normal text-justify">WebServer written in Go that allows users to upload
+                    <p class="lg:text-lg font-normal text-justify">WebServer written in Go that allows users to upload
                         video
                         files and apply effects. The server uses
                         FFMPEG to handle video operations.</p>
@@ -232,7 +232,8 @@
                 <span class="bg-gray-50 flex flex-col p-5 lg:w-2/5 items-center gap-10">
                     <img loading="lazy" data-src="/static/http-svgrepo-com.svg" class="max-w-[50%] lazy">
                     <h2 class="text-3xl font-extrabold">EasyHTTP</h2>
-                    <p class="text-base font-normal text-justify">HTTP Protocol implementation in Go.</p>
+                    <p class="lg:text-lg font-normal text-justify">HTTP Protocol implementation in Go.
+                        This website is being served by a WebServer using this library to serve content via HTTP.</p>
                     <button class="">
                         <a href="https://github.com/davidpalves06/HTTPGolang" target="_blank" rel="noopener noreferrer"
                             class="whitespace-nowrap overflow-hidden overflow-ellipsis w-full px-8 py-2 transition-colors duration-300 ease-linear fill-red-500  text-xl text-start font-bold border border-red-500  text-red-500 hover:fill-white hover:text-white hover:bg-red-500">
@@ -276,7 +277,7 @@
         </div>
         <p class="text-sm font-light text-center py-4">&copy; 2025 David Alves. All rights reserved.</p>
     </footer>
-    <script src="/static/index.js"></script>
+    <script src="/static/index/index.js"></script>
 </body>
 
 </html>
