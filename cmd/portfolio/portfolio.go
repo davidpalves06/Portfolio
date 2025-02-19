@@ -55,17 +55,18 @@ func handleMessage(request easyhttp.ServerHTTPRequest, response *easyhttp.Server
 }
 
 func main() {
-	server, err := easyhttp.NewHTTPServer(":8080")
+	server, err := easyhttp.NewHTTPServer(":80")
 
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
 
 	server.HandleGET("/contact", easyhttp.FileServer("static/contact/contact.html"))
-	server.HandleGET("/bio", easyhttp.FileServer("static/bio/bio.html"))
+	// server.HandleGET("/bio", easyhttp.FileServer("static/bio/bio.html"))
 	server.HandleGET("/static/contact/*", easyhttp.FileServerFromPath("static/contact"))
-	server.HandleGET("/static/bio/*", easyhttp.FileServerFromPath("static/bio"))
+	// server.HandleGET("/static/bio/*", easyhttp.FileServerFromPath("static/bio"))
 	server.HandleGET("/static/index/*", easyhttp.FileServerFromPath("static/index"))
+	server.HandleGET("/static/assets/*", easyhttp.FileServerFromPath("static/assets"))
 	server.HandleGET("/static/*", easyhttp.FileServerFromPath("static/"))
 	server.HandlePOST("/message", handleMessage)
 	server.HandleGET("/", easyhttp.FileServer("static/index/index.html"))

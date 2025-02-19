@@ -22,7 +22,7 @@
   
   .lazy.loaded {
     @apply opacity-100;
-    transition: opacity 0.5s ease-in 0s, transform 0.25s linear 0s;
+    transition: opacity 0.2s ease-in 0s, transform 0.2s linear 0s;
   }
   
   @keyframes slide-in-left {
@@ -35,7 +35,7 @@
   }
   
   .slide-in-left.loaded {
-    animation: slide-in-left 0.5s ease-in;
+    animation: slide-in-left 0.3s ease-in;
   }
   
   @keyframes slide-in-right {
@@ -48,7 +48,7 @@
   }
   
   .slide-in-right.loaded {
-    animation: slide-in-right 0.5s ease-in;
+    animation: slide-in-right 0.3s ease-in;
   }
 
   .image {
