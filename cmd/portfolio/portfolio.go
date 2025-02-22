@@ -55,7 +55,7 @@ func handleMessage(request easyhttp.ServerHTTPRequest, response *easyhttp.Server
 }
 
 func main() {
-	server, err := easyhttp.NewHTTPServer(":80")
+	server, err := easyhttp.NewHTTPServer(":8080")
 
 	if err != nil {
 		log.Fatalln(err.Error())
