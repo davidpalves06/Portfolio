@@ -61,6 +61,8 @@ func main() {
 		log.Fatalln(err.Error())
 	}
 
+	server.HandleGET("/robots.txt", easyhttp.FileServerFromPath("."))
+	server.HandleGET("/sitemap.xml", easyhttp.FileServerFromPath("."))
 	server.HandleGET("/contact", easyhttp.FileServer("static/contact/contact.html"))
 	// server.HandleGET("/bio", easyhttp.FileServer("static/bio/bio.html"))
 	server.HandleGET("/static/contact/*", easyhttp.FileServerFromPath("static/contact"))
